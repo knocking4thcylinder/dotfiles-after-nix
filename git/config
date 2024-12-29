@@ -1,0 +1,15 @@
+[filter "lfs"]
+	clean = "git-lfs clean -- %f"
+	process = "git-lfs filter-process"
+	required = true
+	smudge = "git-lfs smudge -- %f"
+
+[init]
+	defaultBranch = "master"
+
+[pull]
+	rebase = true
+
+[user]
+	email = "lev.fedorets@ya.ru"
+	name = "knocking4thcylinder"
