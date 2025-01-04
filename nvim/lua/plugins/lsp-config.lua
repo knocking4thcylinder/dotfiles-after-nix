@@ -12,6 +12,7 @@ return {
             lspconfig.hls.setup({ capabilities = capabilities })
             lspconfig.elixirls.setup({ capabilities = capabilities, cmd = { "elixir-ls" } })
             lspconfig.jdtls.setup({ capabilities = capabilities })
+            lspconfig.mypy.setup({ capabilities = capabilities })
             lspconfig.nixd.setup({
                 capabilities = capabilities,
                 cmd = { "nixd" },

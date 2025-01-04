@@ -1,0 +1,349 @@
+nvim .config/nvim/lua/plugins/mason.lua
+nvim
+nvim .zshrc
+zsh
+cd dotfiles/
+mkdir tmux
+$ man 1 tmux
+man 1 tmux
+cd dotfiles/tmux/
+nvim tmux.conf
+tmux
+stow .
+cd ../
+stow .
+rm ~/.config/tmux.conf
+tmux
+nvim tmux/tmux.conf
+tmux
+sudo pacman -S --needed git base-devel<\n>git clone https://aur.archlinux.org/yay.git<\n>cd yay<\n>makepkg -si
+cd ../
+rm -rf yay/
+ls
+rm tmux.conf
+ls
+stow .
+yay -S zen-browser
+yay -S yandex-music-linux
+yay -S yandex-music
+sudo pacman -S chromium
+yay -S rose-pine-gtk-theme-full
+yay -S gradience
+sudo pacman -S adw-gtk3
+sudo pacman -S libadw-gtk3
+sudo pacman -S libadw
+sudo pacman -S libadwaita
+sudo pacman -S libgtk3
+sudo pacman -S libgtk
+sudo pacman -S gtk3
+sudo pacman adw-gtk3
+sudo pacman -h adw-gtk3
+sudo pacman -Q adw-gtk3
+sudo pacman -Q adw
+sudo pacman -Q 
+pacman -S adw-gtk-theme
+sud opacman -S adw-gtk-theme
+sudo pacman -S adw-gtk-theme
+nvim nushell/config.nu
+ls
+ls ghostty/
+ls tmux/
+nvim nushell/config.nu
+ls
+nvim nushell/config.nu
+fish
+sudo pacman -S fish
+^ls \
+^ls 
+eza
+ls
+ls ~/.config/
+nvim starship.toml
+starship 
+starship print-config
+nvim starship.toml
+stow .
+ls
+ll
+l
+ll
+nvim starship.toml
+yay -S wl-clipboard
+nvim starship.toml
+ls
+l
+sls
+ls
+sls
+nvim starship.toml
+ls
+nvim starship.toml
+ls
+nvim starship.toml
+cd nvim
+ls
+yay -S lua
+lua
+cd
+cd dotfiles/
+ls
+stow .
+cd
+mkdir cwe_client_zig
+cd cwe_client_zig/
+zig init
+ls
+zig run
+zig build
+./zig-out/bin/cwe_client_zig
+cd
+cd dotfiles/
+nvim starship.toml
+ls
+l
+sl
+yay -S virtualbox
+yay -S power-profile-daemon
+yay -S power-profiles-daemon
+yay -S autocpufreq
+yay -S auto-cpufreq
+systemctl enable --now auto-cpufreq
+btop
+ls ~/.config/
+mkdir btop
+cd btop
+ls ~/.config/btop
+cd ../
+cp ~/.config/btop ./
+cp -r ~/.config/btop ./
+cd btop
+nvim themes/
+cd ../
+stow .
+rm -rf ~/.config/btop
+stow .
+btop
+bash
+ls /sbin/
+yay -S vboxconfig
+yay -S vbox-config
+sudo /sbin/zstd
+sudo /sbin/zsh
+sudo /sbin/vboxconfig
+ls
+cd /etc/modules-load.d/
+ls
+sudo rm -rf virtualbox-host-modules-arch.conf
+reboot
+cd dotfiles/
+ls
+nvim starship.toml
+vim nushell/
+nvim nushell/
+starship preset nerd-font-symbols -o ./starship.toml
+vim starship.toml
+starship preset jetpack -o ./starship.toml
+ls
+cd
+cd cwe_client_zig/
+ls
+starship preset nerd-font-symbols -o ./starship.toml
+ls
+rm starship.toml
+cd 
+cd dotfiles/
+starship preset nerd-font-symbols -o ./starship.toml
+ls
+vim starship.toml
+cd 
+cd cwe_client_zig/
+ls
+l
+sl
+ls
+l
+sl
+ls
+cd
+touch ex.py
+cd dotfiles/
+vim starship.toml
+cd
+cd cwe_client_zig/
+cd
+cd dotfiles/
+ls
+vim starship.toml
+cd
+rm ex.py
+touch ex.py
+rm ex.py
+cd cwe_client_zig/
+ls
+cd dotfiles/
+cd
+cd dotfiles/
+ls
+vim starship.toml
+cd 
+cd cwe_client_zig/w
+cd cwe_client_zig/
+cd
+cd dotfiles/
+vim starship.toml
+c
+cd
+cd cwe_client_zig/
+ls
+cd
+mkdir AOC_2024
+cd AOC
+cd AOC_2024/
+zic 
+ls
+l
+ls -al
+ls -ah
+ls -aal
+zic --help
+zig init
+ls
+cd
+cd dotfiles/
+cd nushell/\
+cd nushell/
+nvim env.nu
+nvim config.nu
+cd
+cd dotfiles/btop/
+cd
+cd btop
+z
+cd
+cd btop
+fzf
+yay -S zen-browser
+yay -S zen-browser-bin
+yay -S bluez
+zsh
+vim
+nvim
+cd /home/lev-arch/AOC_2024
+ls
+l
+s
+ls
+sl
+ls
+ls -al
+ls -l
+cd src
+ls
+bat root.zig
+yay -S bat
+bat root.zig
+bat main.zig
+cd ../
+bat build.zig.zon
+bat build.zig
+yay -S telegram-desktop
+yay -S docker
+yay -S mdbook
+yay -S make
+gh repo clone zigcc/zig-cookbook
+git clone https://github.com/zigcc/zig-cookbook.git
+cd zig-coo
+ls
+cd zig-cookbook
+ls
+make install-deps
+pkg-config
+sudo pacman -S --needed pkg-config libsqlite3-dev libpq-dev libmysqlclient-dev
+sudo pacman -S --needed pkg-config libsqlite3 libpq libmysqlclient
+pacman libsqlite
+yay libsqlite
+yay libpq
+sudo pacman -S --needed pkg-config libsqlite3 libpq libmysqlclient
+cd
+fzf
+fzf -d
+fzf -D
+fzf -h
+fzf
+cd .cache/yay/mysql
+ls
+du
+cd src
+ls
+du
+yay libmysqlclient
+python3
+cd
+cd dotfiles/nvim
+vim
+nvim
+cd
+cd .py
+pip install pylsp-mypy
+pip3 install pylsp-mypy
+yay -S pip
+yay -S pip3
+yay -S python-pip3
+yay -S python3-pip
+yay pip
+yay python-pip
+pipx
+pipx interpreter
+pipx interpreter upgrade
+yay python-pip
+ls
+nvim ~/.config/cosmic/com.system76.CosmicComp/v1/xkb_config
+ls
+cp -r ~/.config/cosmic ~/dotfiles/cosmic
+ls dotfiles/
+ls dotfiles/cosmic/
+cd dotfiles
+ls
+stor .
+stow .
+rm -rf ~/.config/cosmic
+stow .
+stow . --adopt
+stow . -h
+stow . --override="*"
+stow . --override=*
+stow . --override
+ls
+ls cosmic/
+lg
+lazygit
+git add *
+git rm --cached tmux/plugins/tmux-continuum
+git rm --cached tmux/plugins/tmux-continuum -f
+git add *
+ls
+ls tmux/
+ls tmux/plugins/tmux-continuum/
+ls tmux/plugins/tmux-continuum/ -a
+git submodule add git@github.com:tmux-plugins/tmux-continuum.git tmux/plugins/tmux-continuum
+git submodule add https://github.com/tmux-plugins/tmux-continuum.git tmux/plugins/tmux-continuum
+git add *
+ls
+stow . --adopt
+cd cosmic
+fzf
+nvim
+rm -rf ~/.config/cosmic
+cd cosmic
+la
+ls
+rm -rf ~/*
+ls
+cd
+ls
+cd cosmic
+ls rm -rf ./*
+rm -rf ./*
+ls
+git add *
+ls
