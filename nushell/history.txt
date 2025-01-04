@@ -347,3 +347,17 @@ rm -rf ./*
 ls
 git add *
 ls
+git commit -a
+git push -u origin master
+gh auth login
+nvim ../
+cd ../
+nvim gh-token
+nvim .gitignore
+ls -a
+nvim .gitignore
+git add .gitignore
+git add *
+git config advice.addIgnoredFile false
+git add *
+ls
