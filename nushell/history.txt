@@ -66,3 +66,9 @@ ls cosmic/
 cp
 ls
 git add *
+git commit -a
+ls
+stow .
+rm -rf ~/.config/cosmic
+stow .
+ls
