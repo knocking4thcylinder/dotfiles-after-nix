@@ -13,3 +13,9 @@
 [user]
 	email = "lev.fedorets@ya.ru"
 	name = "knocking4thcylinder"
+
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+
+[credential]
+    helper = /usr/local/bin/git-credential-manager

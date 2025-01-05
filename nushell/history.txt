@@ -8,3 +8,61 @@ kd
 less
 less nushell/history.txt
 git add *
+git commit -a
+ls
+git push -u origin master
+gh auth login
+ls
+git push -u origin master
+gh auth login
+yay -S git-credential-helper
+cd
+ls git-credential-manager/
+curl -L https://aka.ms/gcm/linux-install-source.sh | sh<\n>git-credential-manager configure
+gh auth login
+cd /home/lev-arch/dotfiles
+ls
+l
+sls
+ls
+l
+sl
+ls
+l
+sl
+ls
+rm dotnet-install.sh
+rm gh-token
+ls
+l
+git 
+git p
+git push -u origin master
+nvim ~/.config/git/config
+git push -u origin master
+git config credential.credentialStore gpg
+git push -u origin master
+sl
+git config credential.helper git-credential-manager
+git-credential-manager 
+git-credential-manager configure
+nvim ~/.config/git/config
+git push -u origin master
+nvim ~/.config/git/config
+git push -u origin master
+git --help
+git --help git
+git remote get-url origin
+git remote remove origin
+git remote add origin git@github.com:knocking4thcylinder/dotfiles-after-nix.git
+git push -u origin master
+rm -rf ./cosmic/
+rm -rf ./cosmic
+ls
+cp -r ~/.config/cosmic ./
+ls
+du
+ls cosmic/
+cp
+ls
+git add *
