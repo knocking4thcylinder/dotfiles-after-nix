@@ -1,4 +1,5 @@
 return {
+	{},
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
@@ -12,20 +13,6 @@ return {
 			lspconfig.hls.setup({ capabilities = capabilities })
 			lspconfig.elixirls.setup({ capabilities = capabilities, cmd = { "elixir-ls" } })
 			lspconfig.jdtls.setup({ capabilities = capabilities })
-			lspconfig.nixd.setup({
-				capabilities = capabilities,
-				cmd = { "nixd" },
-				settings = {
-					nixd = {
-						nixpks = {
-							expr = "import <nixpkgs> { }",
-						},
-						formatting = {
-							command = { "nixfmt" },
-						},
-					},
-				},
-			})
 			lspconfig.metals.setup({
 				capabilities = capabilities,
 				cmd = { "metals" },
@@ -64,7 +51,12 @@ return {
 			})
 			lspconfig.clangd.setup({ capabilities = capabilities })
 			lspconfig.zls.setup({ capabilities = capabilities })
-			lspconfig.pylsp.setup({ capabilities = capabilities })
+			lspconfig.pylsp.setup({
+				flags = {
+					debounce_text_changes = 200,
+				},
+				capabilities = capabilities,
+			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
