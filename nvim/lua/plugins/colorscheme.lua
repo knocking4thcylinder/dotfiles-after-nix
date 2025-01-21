@@ -20,7 +20,7 @@ return {
 			},
 
 			groups = {
-				border = "muted",
+				border = "rounded",
 				link = "iris",
 				panel = "surface",
 
