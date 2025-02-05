@@ -1,8 +1,9 @@
+gtk-titlebar = false
 theme = rose-pine
 font-family = "IosevkaTerm NFM"
 font-size = 14
 background = "101010"
 background-opacity = 0.9
-window-decoration = false
+window-decoration = none
 window-save-state = always
 term = xterm-256color

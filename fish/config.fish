@@ -11,6 +11,8 @@ set -Ux FZF_DEFAULT_OPTS "
 	--color=spinner:#f6c177,info:#9ccfd8
 	--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
 
+set -Ux TRIK_PYTHONPATH (python3.11 -c 'import sys; import os; print(os.pathsep.join(sys.path))')
+
 alias lg="lazygit"
 alias vi="nvim"
 alias vim="nvim"
@@ -20,3 +22,7 @@ alias l="eza -la --icons=always --color=always"
 
 starship init fish | source
 
+
+# >>> coursier install directory >>>
+set -gx PATH "$PATH:/home/lev-arch/.local/share/coursier/bin"
+# <<< coursier install directory <<<
