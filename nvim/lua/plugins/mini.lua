@@ -22,7 +22,7 @@ return {
         require("mini.clue").setup()
         require("mini.git").setup()
         require("mini.files").setup({ windows = { border = "rounded" } })
-        vim.keymap.set("n", "<C-n>", "<CMD>lua MiniFiles.open()<CR>")
+        vim.keymap.set("n", "<C-f>", "<CMD>lua MiniFiles.open()<CR>")
         -- require("mini.notify").setup()
         require("mini.surround").setup()
         require("mini.operators").setup()

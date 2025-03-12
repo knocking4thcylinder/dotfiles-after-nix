@@ -21,8 +21,16 @@ alias ll="eza -l --icons=always --color=always"
 alias l="eza -la --icons=always --color=always"
 
 starship init fish | source
+atuin init --disable-up-arrow fish | source
 
 
 # >>> coursier install directory >>>
-set -gx PATH "$PATH:/home/lev-arch/.local/share/coursier/bin"
+set -gx PATH "$PATH:/home/lev-arch/.local/share/coursier/bin:/app"
 # <<< coursier install directory <<<
+
+# pnpm
+set -gx PNPM_HOME "/home/lev-arch/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
