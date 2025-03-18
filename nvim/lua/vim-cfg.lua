@@ -10,6 +10,7 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.termguicolors = true
 vim.opt.relativenumber = true
+vim.opt.mousescroll = "ver:1,hor:6"
 vim.opt.nu = true
 vim.opt.clipboard:append({ "unnamedplus" })
 
