@@ -13,11 +13,13 @@ set -gx FZF_DEFAULT_OPTS "
 
 set -gx TRIK_PYTHONPATH (python3.11 -c 'import sys; import os; print(os.pathsep.join(sys.path))')
 
+set -gx EDITOR "nvim"
 set -gx GRADLE_PATH "$HOME/thirdparty/gradle-8.11.1/bin/"
 set -gx KOTLIN_PATH "$HOME/thirdparty/kotlinc/bin/"
 set -gx KOTLIN_NATIVE_PATH "$HOME/thirdparty/kotlin-native-prebuilt-linux-x86_64-2.1.20/bin/"
+set -gx GOPATH "$HOME/go/bin/"
 
-set -gx PATH "$PATH:$KOTLIN_NATIVE_PATH:$KOTLIN_PATH:$GRADLE_PATH"
+set -gx PATH "$PATH:$GOPATH:$KOTLIN_NATIVE_PATH:$KOTLIN_PATH:$GRADLE_PATH"
 abbr -a lg lazygit
 abbr -a vi nvim
 abbr -a vim nvim
@@ -26,6 +28,7 @@ abbr -a ll "eza -l --icons=always --color=always"
 abbr -a l "eza -la --icons=always --color=always"
 
 starship init fish | source
+carapace _carapace fish | source
 atuin init --disable-up-arrow fish | source
 
 # >>> coursier install directory >>>

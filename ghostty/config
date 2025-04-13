@@ -1,9 +1,9 @@
 gtk-titlebar = false
 theme = rose-pine
 bold-is-bright = true
-font-family = "IosevkaTerm NFM"
+font-family = IosevkaTerm NFM
 font-size = 14
-background = "101010"
+background = 101010
 background-opacity = 0.9
 window-decoration = none
 window-save-state = always
