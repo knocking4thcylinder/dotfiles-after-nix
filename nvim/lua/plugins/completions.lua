@@ -18,6 +18,9 @@ return {
 				nerd_font_variant = "Nerd Font Mono",
 			},
 			cmdline = {
+                keymap = {
+                    ["<Tab>"] = { "select_and_accept", }
+                },
 				completion = {
 					menu = {
 						auto_show = true,
