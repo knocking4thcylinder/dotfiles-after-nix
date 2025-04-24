@@ -3,8 +3,10 @@ theme = rose-pine
 bold-is-bright = true
 font-family = IosevkaTerm NFM
 font-size = 14
-background = 101010
-background-opacity = 0.9
+palette = 2=#9ccfd8
+palette = 10=#9ccfd8
+#background = 101010
+#background-opacity = 0.985
 window-decoration = none
 window-save-state = always
 term = xterm-256color

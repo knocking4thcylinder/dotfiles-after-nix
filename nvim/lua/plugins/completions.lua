@@ -34,7 +34,7 @@ return {
                         if vim.bo.filetype == "python" then
                             return { " ", "\n", "\t", ":" }
                         end
-                        return { "\n", " ", "\t" }
+                        return { "\n", " ", "\t", ":" }
                     end,
                 },
                 list = {
