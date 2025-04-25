@@ -20,8 +20,8 @@
     "font_family": "IosevkaTerm Nerd Font Mono"
   },
   "theme": {
-    "mode": "system",
-    "light": "One Light",
+    "mode": "dark",
+    "light": "Rosé Pine Moon",
     "dark": "Rosé Pine"
   }
 }

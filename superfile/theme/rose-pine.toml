@@ -38,10 +38,10 @@ modal_fg = "#e0def4"
 cursor = "#9ccfd8"
 correct = "#8ec07c"
 error = "#ff6969"
-hint = "#31784f"
+hint = "#9ccfd8"
 cancel = "#838383"
 # Gradient color can only have two color!
-gradient_color = ["#31784f", "#eb6f92"]
+gradient_color = ["#9ccfd8", "#eb6f92"]
 
 # ========= File Panel Special Items =========
 file_panel_top_directory_icon = "#9ccfd8"

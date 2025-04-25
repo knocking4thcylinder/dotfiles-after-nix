@@ -264,9 +264,11 @@ symbol = " "
 symbol = " "
 
 [character]
-vimcmd_symbol = '[V](bold #31748F)'
+# vimcmd_symbol = '[V](bold #31748F)'
+vimcmd_symbol = '[V](bold blue)'
 vimcmd_replace_one_symbol = '[V](bold purple)'
 vimcmd_replace_symbol = '[V](bold purple)'
 vimcmd_visual_symbol = '[V](bold yellow)'
 error_symbol = '[❯](bold red)'
-success_symbol = '[❯](bold #31748F)'
+success_symbol = '[❯](bold blue)'
+# success_symbol = '[❯](bold #31748F)'
