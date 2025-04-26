@@ -38,7 +38,7 @@ function la --wraps=ls --description 'List contents of directory, including hidd
     eza -lA --icons=always --color=always $argv
 end
 
-# starship init fish | source
+starship init fish | source
 carapace _carapace fish | source
 atuin init --disable-up-arrow fish | source
 
