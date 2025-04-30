@@ -30,7 +30,7 @@ return {
             completion = {
                 trigger = {
                     show_on_trigger_character = true,
-                    show_on_blocked_trigger_characters = function(cxt)
+                    show_on_blocked_trigger_characters = function(_)
                         if vim.bo.filetype == "python" then
                             return { " ", "\n", "\t", ":" }
                         end

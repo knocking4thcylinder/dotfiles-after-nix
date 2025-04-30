@@ -17,6 +17,7 @@ return {
 			lspconfig.html.setup({ capabilities = capabilities })
 			lspconfig.lua_ls.setup({ capabilities = capabilities })
 			lspconfig.lemminx.setup({ capabilities = capabilities })
+			lspconfig.cssls.setup({ capabilities = capabilities })
 			lspconfig.hls.setup({ capabilities = capabilities })
 			lspconfig.elixirls.setup({ capabilities = capabilities, cmd = { "elixir-ls" } })
 			lspconfig.jdtls.setup({ capabilities = capabilities })

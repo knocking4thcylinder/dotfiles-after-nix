@@ -2,6 +2,15 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+bind -M insert ctrl-p history-search-backward
+bind -e -M insert up
+
+bind -M insert ctrl-n history-search-forward
+bind -e -M insert down
+
+bind -M insert ctrl-m accept-autosuggestion and execute
+bind -M insert ctrl-e accept-autosuggestion 
+
 set -gx FZF_DEFAULT_OPTS "
 --color=fg:#908caa,bg:#191724,hl:#ebbcba
 --color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba
@@ -12,6 +21,8 @@ set -gx FZF_DEFAULT_OPTS "
 set -gx LS_COLORS (vivid generate rose-pine | string replace -a "49;116;143" "156;207;216")
 
 set -gx TRIK_PYTHONPATH (python3.11 -c 'import sys; import os; print(os.pathsep.join(sys.path))')
+
+set -gx fish_greeting
 
 set -gx EDITOR nvim
 set -gx GRADLE_PATH "$HOME/thirdparty/gradle-8.11.1/bin/"

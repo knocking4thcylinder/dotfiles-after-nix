@@ -55,7 +55,7 @@ return {
 				VertSplit = { fg = "muted", bg = "muted" },
 			},
 
-			before_highlight = function(group, highlight, palette)
+			before_highlight = function(_, highlight, palette)
 			-- 	-- Disable all undercurls
 			-- 	if highlight.undercurl then
 			-- 		highlight.undercurl = false
