@@ -13,6 +13,7 @@ return {
 
 			lspconfig.kotlin_language_server.setup({ capabilities = capabilities })
 			lspconfig.bashls.setup({ capabilities = capabilities })
+			lspconfig.hyprls.setup({ capabilities = capabilities })
 			lspconfig.gopls.setup({ capabilities = capabilities })
 			lspconfig.html.setup({ capabilities = capabilities })
 			lspconfig.lua_ls.setup({ capabilities = capabilities })

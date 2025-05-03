@@ -10,7 +10,7 @@
     horizontal_padding = 4
     frame_width = 1
     gap_size = 1
-    font = "Iosevka NF 16"
+    font = "Iosevka NF 10"
 
     icon_theme = "rose-pine-icons"
     enable_recursive_icon_lookup = true

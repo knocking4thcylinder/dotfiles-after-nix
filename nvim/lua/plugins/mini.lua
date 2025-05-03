@@ -27,7 +27,7 @@ return {
         require("mini.surround").setup()
         require("mini.operators").setup()
         require("mini.comment").setup()
-        require("mini.starter").setup()
+        -- require("mini.starter").setup()
         local miniclue = require("mini.clue")
         miniclue.setup({
             triggers = {

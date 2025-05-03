@@ -37,6 +37,18 @@ abbr -a lg lazygit
 abbr -a vi nvim
 abbr -a vim nvim
 
+abbr -a gd "git diff"
+abbr -a gs "git status --short"
+abbr -a gc "git commit"
+abbr -a gp "git push"
+abbr -a gu "git pull"
+abbr -a gl "git log --graph --all --pretty=format:'%C(magenta)%h %C(white) %an  %ar%C(blue)  %D%n%s%n'"
+abbr -a gb "git branch"
+abbr -a gi "git init"
+abbr -a gcl "git clone"
+abbr -a gco "git checkout"
+abbr -a gap "git add --patch"
+
 function ls --description 'List contents of directory'
     eza --icons=always --color=always $argv
 end

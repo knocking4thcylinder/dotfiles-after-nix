@@ -7,12 +7,87 @@
 [init]
 	defaultBranch = "master"
 
+[push]
+    autoSetupRemote = true
+    default = current
+    followTags = true
+
 [pull]
+    default = current
 	rebase = true
+
+[rebase]
+    autoStash = true
+    missingCommitsCheck = warn
+
+[status]
+    branch = true
+    showStash = true
+    showUntrackedFiles = all
 
 [user]
 	email = "lev.fedorets@ya.ru"
 	name = "knocking4thcylinder"
+
+[core]
+    compression = 9
+    whitespace = error
+    preloadindex = true
+
+[branch]
+    sort = -commiterdate
+
+[tag]
+    sort = taggerdate
+
+[diff]
+    context = 3
+    renames = copies
+    interHunkContext = 10
+
+[interactive]
+    diffFilter = diff-so-fancy --patch
+    singlekey = true
+
+[log]
+    abbrevCommit = true
+    graphColors = blue, yellow, cyan, magenta, green, red
+
+[pager]
+    branch = false
+    diff = diff-so-fancy | less
+
+[diff-so-fancy]
+    markEmptyLines = false
+
+[blame]
+    coloring = highlightRecent
+    date = relative
+
+[color "branch"]
+    current  = magenta
+    local    = default
+    remote   = yellow
+    upstream = green
+    plain    = blue
+
+[color "diff"]
+    meta = black bold
+    frag = magenta
+    context = white
+    whitespace = yellow reverse
+    old = red
+
+[advice]
+    addEmptyPathSpec = false
+    pushNonFastForward = false
+    statusHints = false
+
+[url "git@github.com:knocking4thcylinder/"]
+    insteadOf = "me:"
+
+[url "git@github.com:"]
+    insteadOf = "gh:"
 
 [credential "https://dev.azure.com"]
 	useHttpPath = true

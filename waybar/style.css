@@ -85,6 +85,7 @@
 #custom-pacman,
 #custom-weather,
 #tray,
+#submap,
 #backlight,
 #language {
     padding-left: 0.6em;
@@ -115,7 +116,7 @@
 #temperature.critical,
 #battery.critical.discharging {
     animation-name: blink-critical;
-    animation-duration: 2s;
+    animation-duration: 1s;
 }
 
 /* Each warning */
@@ -125,7 +126,7 @@
 #temperature.warning,
 #battery.warning {
     background: @gold;
-    color: @text
+    color: @surface;
 }
 
 /* Each warning that should blink */
@@ -136,7 +137,8 @@
 
 /* And now modules themselves in their respective order */
 
-#submap { /* Shown current Sway mode (resize etc.) */
+#submap { /* Shown current Hyprland submap (resize etc.) */
+    font-weight: bold;
     color: @text;
     background: @love;
 }
@@ -157,15 +159,16 @@
     font-size: 1em;
 }
 
-#workspaces button.focused {
+#workspaces button.active {
     background: @foam;
-    color: @text;
+    color: @surface;
     opacity: 1;
 }
 
 #workspaces button.urgent {
     /* border-color: color: @; */
-    color: @gold;
+    background: @gold;
+    color: @surface;
     opacity: 1;
 }
 
@@ -241,7 +244,9 @@ window#waybar.empty #window {
     color: @text;
 }
 #temperature.critical {
-    background:  @rose;
+    background:  @love;
+    color: @text;
+
 }
 #custom-layout {
     background: @surface;
@@ -274,12 +279,12 @@ window#waybar.empty #window {
 
 #pulseaudio.muted {
     background: @love;
-    color: @love;
+    color: @text;
     /* No styles */
 }
 #pulseaudio.source-muted {
-    background: @rose;
-    color: @text;
+    background: @gold;
+    color: @surface;
     /* No styles */
 }
 #tray {

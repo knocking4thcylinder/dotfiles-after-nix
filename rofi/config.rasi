@@ -1,6 +1,6 @@
 configuration{
     modi: "run,drun";
-    lines: 6;
+    lines: 8;
     font: "Iosevka NF 16";
     show-icons: true;
     icon-theme: "rose-pine-icons";
@@ -24,7 +24,9 @@ element-text, element-icon , mode-switcher {
 }
 
 window {
-    height: 360px;
+    // animation-duration: 0.15s;
+    height: 512px;
+    border-radius: 4px;
     border: 1px;
     border-color: @border-col;
     background-color: @bg-col;
@@ -37,16 +39,16 @@ mainbox {
 inputbar {
     children: [prompt,entry];
     background-color: @bg-col;
-    border-radius: 6px;
-    padding: 2px;
+    border-radius: 4px;
+    padding: 4px;
 }
 
 prompt {
     background-color: @blue;
-    padding: 6px;
+    padding: 8px;
     text-color: @bg-col;
-    border-radius: 3px;
-    margin: 20px 0px 0px 20px;
+    border-radius: 4px;
+    margin: 4px 0px 0px 4px;
 }
 
 textbox-prompt-colon {
@@ -55,8 +57,8 @@ textbox-prompt-colon {
 }
 
 entry {
-    padding: 6px;
-    margin: 20px 0px 0px 10px;
+    padding: 4px;
+    margin: 8px 0px 0px 4px;
     text-color: @fg-col;
     background-color: @bg-col;
     placeholder:"Search";
@@ -65,14 +67,14 @@ entry {
 
 listview {
     border: 0px 0px 0px;
-    padding: 6px 0px 0px;
-    margin: 10px 0px 0px 20px;
-    columns: 2;
+    padding: 4px 0px 0px;
+    margin: 4px 0px 0px 4px;
+    columns: 1;
     background-color: @bg-col;
 }
 
 element {
-    padding: 5px;
+    padding: 4px;
     background-color: @bg-col;
     text-color: @fg-col  ;
 }
@@ -87,11 +89,11 @@ element selected {
 }
 
 mode-switcher {
-    spacing: 0;
+    spacing: 4px;
   }
 
 button {
-    padding: 10px;
+    padding: 4;
     background-color: @bg-col-light;
     text-color: @grey;
     vertical-align: 0.5; 

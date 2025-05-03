@@ -1,0 +1,74 @@
+/* COLORS */
+/*
+* Variant: Rosé Pine
+* Maintainer: DankChoir
+*/
+
+@define-color base #191724;
+@define-color surface #1f1d2e;
+@define-color overlay #26233a;
+
+@define-color muted #6e6a86;
+@define-color subtle #908caa;
+@define-color text #e0def4;
+
+@define-color love #eb6f92;
+@define-color gold #f6c177;
+@define-color rose #ebbcba;
+@define-color pine #31748f;
+@define-color foam #9ccfd8;
+@define-color iris #c4a7e7;
+
+@define-color highlightLow #21202e;
+@define-color highlightMed #403d52;
+@define-color highlightHigh #524f67;
+
+window#osd {
+    padding: 4px 8px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: #6e6a86;
+    background: #191724;
+
+    #container {
+        border-radius: 4px;
+        border-width: 1px;
+        border-color: #6e6a86;
+        background: #191724;
+        margin: 8px;
+    }
+
+    image,
+    label {
+        color: #{"@theme_fg_color"};
+    }
+
+    progressbar:disabled,
+    image:disabled {
+        opacity: 0.5;
+    }
+
+    progressbar {
+        min-height: 6px;
+        border-radius: 4px;
+        background: #191724;
+        border-width: 1px;
+        border-color: #6e6a86;
+    }
+
+    trough {
+        min-height: inherit;
+        border-radius: 4px;
+        border-width: 1px;
+        border-color: #6e6a86;
+        background: #191724;
+    }
+
+    progress {
+        min-height: inherit;
+        border-radius: 4px;
+        border-width: 1px;
+        border-color: #6e6a86;
+        background: #191724;
+    }
+}

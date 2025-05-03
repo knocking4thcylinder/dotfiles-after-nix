@@ -10,13 +10,13 @@
   // "bluetooth",  "custom/weather", "temperature", "sway/window"
   // Choose the order of the modules
   "modules-left": [
-    "hyprland/workspaces",
     "clock",
     "hyprland/language",
-    "custom/scratchpad-indicator",
-    "custom/pacman",
+    "hyprland/workspaces",
+    // "custom/scratchpad-indicator",
+    // "custom/pacman",
+    // "custom/media",
     "hyprland/submap",
-    "custom/media",
   ],
   "modules-center": ["hyprland/window"],
   "modules-right": [
@@ -52,11 +52,17 @@
       "focused": "",
       "default": "",
     },
+    "persistent-workspaces": {
+      "*": 4,
+    },
   },
+  // "hyprland/submap": {
+  //
+  // },
   "battery": {
     "states": {
       "warning": 20,
-      "critical": 10
+      "critical": 10,
     },
 
     "format": "{icon} {capacity}%",
@@ -67,12 +73,12 @@
     "tooltip-format-charging": "Charging: {time}",
     "interval": 1,
     "min-length": 6,
-    "max-length": 6
+    "max-length": 6,
   },
-  "backlight" :{
+  "backlight": {
     "tooltip": false,
     "format": "{icon} {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
   },
   "sway/mode": {
     "format": "<span style=\"italic\">{}</span>",
@@ -195,12 +201,12 @@
     "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources folder
     // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
   },
-  "custom/scratchpad-indicator": {
-    "interval": 3,
-    "return-type": "json",
-    "exec": "swaymsg -t get_tree | jq --unbuffered --compact-output '( select(.name == \"root\") | .nodes[] | select(.name == \"__i3\") | .nodes[] | select(.name == \"__i3_scratch\") | .focus) as $scratch_ids | [..  | (.nodes? + .floating_nodes?) // empty | .[] | select(.id |IN($scratch_ids[]))] as $scratch_nodes | { text: \"\\($scratch_nodes | length)\", tooltip: $scratch_nodes | map(\"\\(.app_id // .window_properties.class) (\\(.id)): \\(.name)\") | join(\"\\n\") }'",
-    "format": "{} 􏠜",
-    "on-click": "exec swaymsg 'scratchpad show'",
-    "on-click-right": "exec swaymsg 'move scratchpad'",
-  },
+  // "custom/scratchpad-indicator": {
+  //   "interval": 3,
+  //   "return-type": "json",
+  //   "exec": "swaymsg -t get_tree | jq --unbuffered --compact-output '( select(.name == \"root\") | .nodes[] | select(.name == \"__i3\") | .nodes[] | select(.name == \"__i3_scratch\") | .focus) as $scratch_ids | [..  | (.nodes? + .floating_nodes?) // empty | .[] | select(.id |IN($scratch_ids[]))] as $scratch_nodes | { text: \"\\($scratch_nodes | length)\", tooltip: $scratch_nodes | map(\"\\(.app_id // .window_properties.class) (\\(.id)): \\(.name)\") | join(\"\\n\") }'",
+  //   "format": "{} 􏠜",
+  //   "on-click": "exec swaymsg 'scratchpad show'",
+  //   "on-click-right": "exec swaymsg 'move scratchpad'",
+  // },
 }
