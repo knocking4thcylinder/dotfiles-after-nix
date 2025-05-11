@@ -1,7 +1,7 @@
-yay pacman -S --needed --noconfirm git neovim fisher gcc starship zoxide fzf carapace-bin atuin superfile luajit luarocks bat btop ghostty tmux
+sudo pacman -S --needed --noconfirm git neovim fisher gcc starship zoxide fzf carapace-bin atuin superfile luajit luarocks bat btop ghostty tmux tpm stow autocpufreq
 
 #Hyprland stuff
-yay -S --needed --noconfirm hyprland waybar rofi-wayland hyprpaper hypridle xdg-desktop-portal-hyprland hyprlock wl-clipboard wl-clip-persist cliphist dunst hyprpolkitagent network-manager-applet udiskie grim slurp playerctl brightnessctl blueberry autocpufreq btop gnome-calendar pavucontrol keyd xwaylandvideobridge xorg-xwayland wireplumber-pulse
+yay -S --needed --noconfirm hyprland waybar rofi-wayland hyprpaper hypridle xdg-desktop-portal-hyprland hyprlock wl-clipboard wl-clip-persist cliphist swaync hyprpolkitagent network-manager-applet udiskie grim slurp playerctl brightnessctl blueberry autocpufreq btop gnome-calendar pavucontrol keyd xwaylandvideobridge xorg-xwayland wireplumber-pulse fastfetch 
 
 #Fonts
 yay -S --needed --noconfirm ttf-iosevkaterm-nerd ttf-iosevka-nerd ttf-iosevka ttf-font-awesome
@@ -12,4 +12,5 @@ sudo systemctl enable --now keyd.service
 
 fisher install kidonng/zoxide.fish
 fisher install patrickf2/fzf.fish
+
 

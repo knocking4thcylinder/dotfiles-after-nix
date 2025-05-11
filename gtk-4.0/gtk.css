@@ -17,11 +17,11 @@
 @define-color window_fg_color #e0def4;
 @define-color view_bg_color #191724;
 @define-color view_fg_color #e0def4;
-@define-color headerbar_bg_color #1f1d2e;
+@define-color headerbar_bg_color #191724;
 @define-color headerbar_fg_color #e0def4;
 @define-color headerbar_border_color #e0def4;
 @define-color headerbar_backdrop_color @window_bg_color;
-@define-color headerbar_shade_color rgba(31, 29, 46, 0.4);
+@define-color headerbar_shade_color rgba(31, 29, 46, 0);
 @define-color card_bg_color #1f1d2e;
 @define-color card_fg_color #e0def4;
 @define-color card_shade_color rgba(31, 29, 46, 0.36);

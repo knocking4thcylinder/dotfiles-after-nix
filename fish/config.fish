@@ -57,7 +57,7 @@ function ll --wraps=ls --description 'List contents of directory using long form
     eza -l --icons=always --color=always $argv
 end
 
-function la --wraps=ls --description 'List contents of directory, including hidden files in directory using long format'
+function l --wraps=ls --description 'List contents of directory, including hidden files in directory using long format'
     eza -lA --icons=always --color=always $argv
 end
 

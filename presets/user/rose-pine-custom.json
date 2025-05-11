@@ -1,5 +1,5 @@
 {
-    "name": "Rose Pine Custom",
+    "name": "rose-pine-custom",
     "variables": {
         "accent_color": "#c4a7e7",
         "accent_bg_color": "#31748f",
@@ -20,7 +20,7 @@
         "window_fg_color": "#e0def4",
         "view_bg_color": "#191724",
         "view_fg_color": "#e0def4",
-        "headerbar_bg_color": "#1f1d2e",
+        "headerbar_bg_color": "#191724",
         "headerbar_fg_color": "#e0def4",
         "headerbar_border_color": "#e0def4",
         "headerbar_backdrop_color": "@window_bg_color",
