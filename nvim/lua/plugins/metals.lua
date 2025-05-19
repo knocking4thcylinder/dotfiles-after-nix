@@ -1,3 +1,4 @@
+---@diagnostic disable: unused-local, assign-type-mismatch, deprecated
 return {
     "scalameta/nvim-metals",
     dependencies = {

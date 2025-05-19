@@ -95,7 +95,7 @@
       "enabled": "",
       "disabled": "",
     },
-    "on-click": "blueberry",
+    "on-click": "blueman-manager",
   },
   "hyprland/language": {
     "format": " {}",

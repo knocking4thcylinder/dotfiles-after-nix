@@ -8,7 +8,7 @@ bind -e -M insert up
 bind -M insert ctrl-n history-search-forward
 bind -e -M insert down
 
-bind -M insert ctrl-m accept-autosuggestion and execute
+bind -M insert ctrl-y accept-autosuggestion and execute
 bind -M insert ctrl-e accept-autosuggestion 
 
 set -gx FZF_DEFAULT_OPTS "
@@ -28,11 +28,12 @@ set -gx EDITOR nvim
 set -gx GRADLE_PATH "$HOME/thirdparty/gradle-8.11.1/bin/"
 set -gx KOTLIN_PATH "$HOME/thirdparty/kotlinc/bin/"
 set -gx KOTLIN_NATIVE_PATH "$HOME/thirdparty/kotlin-native-prebuilt-linux-x86_64-2.1.20/bin/"
+set -gx UVPATH "$HOME/.local/bin/"
 set -gx GOPATH "$HOME/go/bin/"
 set -gx GOPATH2 "$HOME/go/bin/bin/"
 set -gx MIXPATH "$HOME/.mix/escripts/"
 
-set -gx PATH "$PATH:$MIXPATH:$GOPATH:$GOPATH2:$KOTLIN_NATIVE_PATH:$KOTLIN_PATH:$GRADLE_PATH"
+set -gx PATH "$PATH:$UVPATH:$MIXPATH:$GOPATH:$GOPATH2:$KOTLIN_NATIVE_PATH:$KOTLIN_PATH:$GRADLE_PATH"
 abbr -a lg lazygit
 abbr -a vi nvim
 abbr -a vim nvim

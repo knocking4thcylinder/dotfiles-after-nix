@@ -10,6 +10,8 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	})
 end
 vim.opt.rtp:prepend(lazypath)
+
+vim.g.mapleader = " "
 require("vim-cfg")
 require("keymaps")
 require("lazy").setup("plugins")

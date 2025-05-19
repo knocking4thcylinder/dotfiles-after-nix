@@ -34,9 +34,6 @@
     whitespace = error
     preloadindex = true
 
-[branch]
-    sort = -commiterdate
-
 [tag]
     sort = taggerdate
 

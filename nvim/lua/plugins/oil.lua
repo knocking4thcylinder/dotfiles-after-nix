@@ -9,7 +9,7 @@ return {
     -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
     lazy = false,
     config = function()
-        vim.keymap.set("n", "<C-f>", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+        vim.keymap.set("n", "<C-f>", "<CMD>Oil ./<CR>", { desc = "Open parent directory" })
         require("oil").setup({
             -- Oil will take over directory buffers (e.g. `vim .` or `:e src/`)
             -- Set to false if you want some other plugin (e.g. netrw) to open when you edit directories.
@@ -56,13 +56,13 @@ return {
                 timeout_ms = 1000,
                 -- Set to true to autosave buffers that are updated with LSP willRenameFiles
                 -- Set to "unmodified" to only save unmodified buffers
-                autosave_changes = false,
+                autosave_changes = true,
             },
             -- Constrain the cursor to the editable parts of the oil buffer
             -- Set to `false` to disable, or "name" to keep it on the file names
-            constrain_cursor = "editable",
+            constrain_cursor = "name",
             -- Set to true to watch the filesystem for changes and reload oil
-            watch_for_changes = false,
+            watch_for_changes = true,
             -- Keymaps in oil buffer. Can be any value that `vim.keymap.set` accepts OR a table of keymap
             -- options with a `callback` (e.g. { callback = function() ... end, desc = "", mode = "n" })
             -- Additionally, if it is a string that matches "actions.<name>",

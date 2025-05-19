@@ -1,3 +1,5 @@
+#initial-command = "/usr/bin/tmux attach-session || /usr/bin/tmux"
+#command = "/usr/bin/tmux"
 gtk-single-instance = true
 gtk-titlebar = false
 theme = rose-pine
