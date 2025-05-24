@@ -1,0 +1,9 @@
+[general]
+import = ["~/.config/alacritty/rose-pine.toml"]
+
+[window]
+decorations = "None"
+
+[font]
+normal = { family = "Iosevka NFM", style = "Regular" }
+size = 16
