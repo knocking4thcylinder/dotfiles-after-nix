@@ -1,0 +1,5 @@
+#!/usr/bin/perl
+$regexp = shift;
+foreach (@ARGV) {
+    print "$_\n"if /$regexp/;
+}

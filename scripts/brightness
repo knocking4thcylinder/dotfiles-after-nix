@@ -1,0 +1,27 @@
+#!/usr/bin/fish
+
+set BRIGHT_STEP (math "$(brightnessctl max) * 0.05")
+
+if not test -n "$PREV_BRIGHTNESS"
+    # @fish-lsp-disable-next-line 2003
+    set -U PREV_BRIGHTNESS (brightnessctl get)
+end
+
+if test "$argv[1]" = toggle
+    if test "$(brightnessctl get)" != 0
+        set PREV_BRIGHTNESS (brightnessctl get)
+        brightnessctl set -q 0
+    else
+        brightnessctl set -q $PREV_BRIGHTNESS
+    end
+end
+
+if test "$argv[1]" = up
+    brightnessctl set -q "$(math (brightnessctl get) + $BRIGHT_STEP)"
+    set PREV_BRIGHTNESS (brightnessctl get)
+end
+
+if test "$argv[1]" = down
+    brightnessctl set -q "$(math max 1, (math (brightnessctl get) - $BRIGHT_STEP))"
+    set PREV_BRIGHTNESS (brightnessctl get)
+end

@@ -75,6 +75,7 @@
   },
   "backlight": {
     "tooltip": false,
+    "on-click": "$HOME/dotfiles/scripts/brightness toggle",
     "format": "{icon} {percent}%",
     "format-icons": ["", "", "", "", "", "", "", "", ""],
   },
@@ -98,7 +99,7 @@
     "on-click": "blueman-manager",
   },
   "hyprland/language": {
-    "format": " {}",
+    "format": " {}",
     "min-length": 15,
   },
   "idle_inhibitor": {
@@ -122,7 +123,7 @@
   "cpu": {
     "interval": "1",
     "format": "  {max_frequency}GHz <span color=\"darkgray\">| {usage}%</span>",
-    "on-click": "ghostty --title=btop -e btop",
+    "on-click": "kitty --title=\"btop\" btop",
     "tooltip": false,
   },
   "temperature": {
@@ -133,6 +134,7 @@
     "format-critical": "  {temperatureC}°C",
     "format": "{icon}  {temperatureC}°C",
     "format-icons": ["", "", ""],
+    "on-click": "kitty --title=\"btop\" btop",
   },
   "network": {
     // "interface": "wlan0", // (Optional) To force the use of this interface,
@@ -157,8 +159,8 @@
     "format-source-muted": " ",
     "format-icons": {
       "headphone": "",
-      "hands-free": "",
-      "headset": "",
+      "hands-free": "󰋎",
+      "headset": "󰋎 ",
       "phone": "",
       "portable": "",
       "car": "",

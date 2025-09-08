@@ -24,7 +24,6 @@ return {
         require("mini.splitjoin").setup()
         require("mini.clue").setup()
         -- require("mini.files").setup({ windows = { border = "rounded" } })
-        vim.keymap.set("n", "<C-f>", "<CMD>lua MiniFiles.open()<CR>")
         -- require("mini.notify").setup()
         require("mini.surround").setup()
         require("mini.operators").setup()

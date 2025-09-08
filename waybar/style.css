@@ -58,7 +58,7 @@
     min-height: 0;
     padding: 0px;
     margin: 2px 2px;
-    font-family: "Iosevka NF"; /*, "Font Awesome 6"; */
+    font-family: "IosevkaTerm NF";
     font-size:16px; 
     font-weight: bold;
 }
@@ -101,9 +101,9 @@
 #battery {
     margin: 4px 4px;
     padding: 4px 16px;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    /* animation-timing-function: linear; */
+    /* animation-iteration-count: infinite; */
+    /* animation-direction: alternate; */
 }
 
 /* Each critical module */
@@ -111,7 +111,8 @@
 #cpu.critical,
 #temperature.critical,
 #battery.critical {
-    color: @love;
+    background-color: @love;
+    color: @surface;
     padding: 4px 16px;
     margin: 4px 4px;
 }
@@ -121,8 +122,9 @@
 #memory.critical,
 #temperature.critical,
 #battery.critical.discharging {
-    animation-name: blink-critical;
-    animation-duration: 1s;
+    animation: none;
+    /* animation-name: blink-critical; */
+    /* animation-duration: 1s; */
     padding: 4px 16px;
     margin: 4px 4px;
 }
@@ -141,8 +143,9 @@
 
 /* Each warning that should blink */
 #battery.warning.discharging {
-    animation-name: blink-warning;
-    animation-duration: 3s;
+    animation: none;
+    /* animation-name: blink-warning; */
+    /* animation-duration: 3s; */
     padding: 4px 16px;
     margin: 4px 4px;
 }

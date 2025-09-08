@@ -5,5 +5,5 @@ import = ["~/.config/alacritty/rose-pine.toml"]
 decorations = "None"
 
 [font]
-normal = { family = "Iosevka NFM", style = "Regular" }
+normal = { family = "Iosevka NFM", style = "Bold" }
 size = 16

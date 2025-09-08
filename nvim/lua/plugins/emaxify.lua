@@ -4,8 +4,18 @@ vim.api.nvim_create_autocmd({ "TermOpen", "BufEnter", "BufWinEnter" }, {
 		if vim.opt.buftype:get() == "terminal" then
 			vim.opt.number = false
 			vim.opt.relativenumber = false
+			vim.wo.scrolloff = 0
 			vim.cmd.startinsert()
 		end
+	end,
+})
+
+vim.api.nvim_create_autocmd({ "WinNew", "BufEnter", "WinEnter", "BufWinEnter", "VimResized" }, {
+	group = vim.api.nvim_create_augroup("VCenterCursor", { clear = true }),
+	callback = function()
+		local win = vim.api.nvim_get_current_win()
+		local height = vim.api.nvim_win_get_height(win)
+		vim.wo.scrolloff = vim.fn.max({ height - (36 * 3 / 4), 1 })
 	end,
 })
 
@@ -48,20 +58,30 @@ vim.keymap.set("n", vim.fn.join({ win_prefix, "tt" }, ""), function()
 	vim.cmd.term()
 end)
 
+vim.keymap.set({ "n", "v" }, "<leader>cwd", function()
+	if vim.opt.filetype:get() == "oil" then
+		local fname = vim.fn.bufname()
+		local dir = string.match(fname, "oil://(.*)")
+		vim.fn.chdir(dir)
+        -- vim.fn.highlightID
+        print(vim.fn.printf("set cwd to %s", dir))
+	end
+end)
+
 return {
 	"akinsho/bufferline.nvim",
 	config = function()
 		vim.opt.termguicolors = true
 		require("bufferline").setup({
 			options = {
-                style_preset = require("bufferline").style_preset.no_bold,
-                show_buffer_close_icons = false,
+				style_preset = require("bufferline").style_preset.no_bold,
+				show_buffer_close_icons = false,
 				mode = "tabs",
-                always_show_bufferline = false,
-                auto_toggle_bufferline = true,
-                indicator = {
-                    style = "none"
-                }
+				always_show_bufferline = false,
+				auto_toggle_bufferline = true,
+				indicator = {
+					style = "none",
+				},
 			},
 		})
 	end,
