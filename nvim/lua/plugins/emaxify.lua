@@ -40,18 +40,13 @@ vim.keymap.set("n", vim.fn.join({ win_prefix, "to" }, ""), ":tabnew<CR>")
 vim.keymap.set("n", vim.fn.join({ win_prefix, "tn" }, ""), ":tabN<CR>")
 vim.keymap.set("n", vim.fn.join({ win_prefix, "tp" }, ""), ":tabp<CR>")
 
-vim.keymap.set("n", vim.fn.join({ win_prefix, "tb" }, ""), function()
-	vim.cmd.vnew()
-	vim.cmd.term()
-	vim.cmd.wincmd("J")
-	vim.api.nvim_win_set_height(0, 8)
-end)
-
-vim.keymap.set("n", vim.fn.join({ win_prefix, "tl" }, ""), function()
+vim.keymap.set("n", vim.fn.join({ win_prefix, "tf" }, ""), function()
 	vim.cmd.vnew()
 	vim.cmd.term()
 	vim.cmd.wincmd("L")
 end)
+
+vim.keymap.set("n", vim.fn.join({ win_prefix, "tl" }, ""), ":silent !tmux split-window -h -l 60<CR>")
 
 vim.keymap.set("n", vim.fn.join({ win_prefix, "tt" }, ""), function()
 	vim.cmd.tabnew()

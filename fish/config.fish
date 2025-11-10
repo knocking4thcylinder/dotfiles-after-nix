@@ -20,20 +20,22 @@ set -gx FZF_DEFAULT_OPTS "
 
 set -gx LS_COLORS (vivid generate rose-pine | string replace -a "49;116;143" "156;207;216")
 
-set -gx TRIK_PYTHONPATH (python3.11 -c 'import sys; import os; print(os.pathsep.join(sys.path))')
+# set -gx TRIK_PYTHONPATH (python3.11 -c 'import sys; import os; print(os.pathsep.join(sys.path))')
 
 set -gx fish_greeting
 
 set -gx EDITOR nvim
+set -gx JAVA_HOME "/usr/lib/jvm/default-runtime/"
 set -gx GRADLE_PATH "$HOME/thirdparty/gradle-8.11.1/bin/"
 set -gx KOTLIN_PATH "$HOME/thirdparty/kotlinc/bin/"
 set -gx KOTLIN_NATIVE_PATH "$HOME/thirdparty/kotlin-native-prebuilt-linux-x86_64-2.1.20/bin/"
+set -gx DENOPATH "$HOME/.deno/bin/"
 set -gx UVPATH "$HOME/.local/bin/"
 set -gx GOPATH "$HOME/go/bin/"
 set -gx GOPATH2 "$HOME/go/bin/bin/"
 set -gx MIXPATH "$HOME/.mix/escripts/"
 
-set -gx PATH "$PATH:$UVPATH:$MIXPATH:$GOPATH:$GOPATH2:$KOTLIN_NATIVE_PATH:$KOTLIN_PATH:$GRADLE_PATH"
+set -gx PATH "$JAVA_HOME/bin:$UVPATH:$DENOPATH:$MIXPATH:$GOPATH:$GOPATH2:$KOTLIN_NATIVE_PATH:$KOTLIN_PATH:$GRADLE_PATH:$PATH"
 abbr -a lg lazygit
 abbr -a vi nvim
 abbr -a vim nvim
@@ -50,6 +52,20 @@ abbr -a gcl "git clone"
 abbr -a gco "git checkout"
 abbr -a gap "git add --patch"
 
+function pacman
+    if [ "$argv[1]" = "-R" ]
+        set argv[1] "-Rs"
+    end
+    command pacman $argv
+end
+
+function yay
+    if [ "$argv[1]" = "-R" ]
+        set argv[1] "-Rs"
+    end
+    command yay $argv
+end
+
 function ls --description 'List contents of directory'
     eza --icons=always --color=always $argv
 end
@@ -62,9 +78,11 @@ function l --wraps=ls --description 'List contents of directory, including hidde
     eza -lA --icons=always --color=always $argv
 end
 
+zoxide init fish --cmd cd | source
 starship init fish | source
 carapace _carapace fish | source
 atuin init --disable-up-arrow fish | source
+fish_config theme choose rose-pine
 
 # >>> coursier install directory >>>
 set -gx PATH "$PATH:/home/lev-arch/.local/share/coursier/bin:/app"

@@ -1,7 +1,10 @@
+local home = os.getenv("HOME")
+local mason = home .. "/.local/share/nvim/mason/packages/jdtls"
 local lsp_servers = {
 	"kotlin_language_server",
 	"bashls",
-	"denols",
+	"ts_ls",
+	-- "denols",
 	"asm_lsp",
 	"tailwindcss",
 	"css_variables",
@@ -14,7 +17,7 @@ local lsp_servers = {
 	"cssls",
 	"hls",
 	"elixirls",
-	"jdtls",
+	-- "jdtls",
 	"rust_analyzer",
 	"clangd",
 	"zls",
@@ -29,6 +32,7 @@ return {
 		end,
 	},
 	{
+		lazy = false,
 		"williamboman/mason-lspconfig.nvim",
 		-- "neovim/nvim-lspconfig",
 		config = function()
@@ -38,24 +42,46 @@ return {
 		end,
 	},
 	{
+		"mfussenegger/nvim-jdtls",
+		ft = { "java" },
+	},
+	{
+		lazy = false,
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			"saghen/blink.cmp",
 		},
 		config = function()
 			local capabilities = require("blink.cmp").get_lsp_capabilities()
-            local lsp_conf_servers = vim.fn.copy(lsp_servers)
-            local custom_servers = {
-                "fish_lsp",
-                "astral_ty",
-            }
-            for _, server in ipairs(custom_servers) do
-                table.insert(lsp_conf_servers, server)
-            end
+			local lsp_conf_servers = vim.fn.copy(lsp_servers)
+			local custom_servers = {
+				"fish_lsp",
+				"astral_ty",
+			}
+			for _, server in ipairs(custom_servers) do
+				table.insert(lsp_conf_servers, server)
+			end
 
 			for _, server in pairs(lsp_conf_servers) do
 				vim.lsp.config(server, { capabilities = capabilities })
 			end
+
+			vim.lsp.config.jdtls = {
+				cmd = { "/home/k4c/.local/share/nvim/mason/packages/jdtls/bin/jdtls" },
+				single_file_support = true,
+				root_dir = vim.fs.root(0, { "pom.xml", "build.gradle", ".project", ".classpath", ".git" })
+					or vim.fs.dirname(vim.api.nvim_buf_get_name(0)), -- fallback for standalone files
+
+				on_attach = function(client, bufnr)
+					local jdtls = require("jdtls")
+					jdtls.setup_dap({
+						hotcodereplace = "auto",
+						config_overrides = {},
+					})
+
+					-- jdtls.setup.add_commands()
+				end,
+			}
 
 			vim.lsp.config.astral_ty = {
 				cmd = { "ty", "server" },
@@ -71,6 +97,16 @@ return {
 					"ty.toml",
 					"uv.lock",
 				},
+			}
+
+			vim.lsp.config.clangd.flags = {
+				"--background-index",
+				"--clang-tidy",
+				"--header-insertion=iwyu",
+				"--completion-style=detailed",
+				"--function-arg-placeholders",
+				"--fallback-style=llvm",
+				"--std=c++23",
 			}
 
 			vim.lsp.config.rust_analyzer = {
@@ -99,9 +135,8 @@ return {
 				},
 			}
 
-			vim.lsp.config.elixirls = {
-				cmd = { "elixir-ls" },
-			}
+			vim.lsp.config.elixirls.cmd = "elixir-ls"
+			vim.lsp.config.elixirls.filetypes = { "elixir", "eelixir", "heex", "surface" }
 
 			vim.lsp.config.pylsp = {
 				settings = {

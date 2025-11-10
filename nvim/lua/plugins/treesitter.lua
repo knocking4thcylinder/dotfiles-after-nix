@@ -1,5 +1,6 @@
 ---@diagnostic disable: missing-fields
 return {
+    lazy = false,
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     config = function()

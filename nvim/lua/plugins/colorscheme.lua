@@ -1,6 +1,8 @@
 ---@diagnostic disable: missing-fields
 return {
+    event = "VimEnter",
     "rose-pine/neovim",
+    priority = 1000,
     config = function()
         require("rose-pine").setup({
             variant = "main", -- auto, main, moon, or dawn

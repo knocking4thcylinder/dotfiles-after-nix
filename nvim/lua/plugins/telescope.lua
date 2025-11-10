@@ -1,5 +1,5 @@
 return {
-
+    lazy = false,
     "nvim-telescope/telescope.nvim",
     branch = "0.1.x",
     dependencies = {
@@ -11,7 +11,8 @@ return {
         },
     },
     config = function()
-        require("telescope").setup({
+        local telescope = require("telescope")
+        telescope.setup({
             extensions = {
                 ["fzf"] = {},
                 ["ui-select"] = {
@@ -43,7 +44,7 @@ return {
         vim.keymap.set("n", "<leader>fg", builtin.git_files, {})
         vim.keymap.set("n", "<leader>fs", builtin.live_grep, {})
 
-        require("telescope").load_extension("ui-select")
-        require("telescope").load_extension("fzf")
+        telescope.load_extension("ui-select")
+        telescope.load_extension("fzf")
     end,
 }

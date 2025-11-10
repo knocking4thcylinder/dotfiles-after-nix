@@ -91,3 +91,5 @@
 
 [credential]
 	helper = git-credential-manager
+[safe]
+	directory = /home/k4c/tree-sitter-java
