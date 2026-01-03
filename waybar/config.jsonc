@@ -123,7 +123,7 @@
   "cpu": {
     "interval": "1",
     "format": "  {max_frequency}GHz <span color=\"darkgray\">| {usage}%</span>",
-    "on-click": "kitty --title=\"btop\" btop",
+    "on-click": "ghostty --title=\"btop\" -e btop",
     "tooltip": false,
   },
   "temperature": {
@@ -134,7 +134,7 @@
     "format-critical": "  {temperatureC}°C",
     "format": "{icon}  {temperatureC}°C",
     "format-icons": ["", "", ""],
-    "on-click": "kitty --title=\"btop\" btop",
+    "on-click": "ghostty --title=\"btop\" -e btop",
   },
   "network": {
     // "interface": "wlan0", // (Optional) To force the use of this interface,

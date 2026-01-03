@@ -2,7 +2,7 @@
 #command = "/usr/bin/tmux"
 gtk-single-instance = true
 gtk-titlebar = false
-theme = rose-pine
+theme = Rose Pine
 bold-is-bright = true
 font-family = IosevkaTerm NFM
 font-size = 16

@@ -35,6 +35,8 @@ set -gx GOPATH "$HOME/go/bin/"
 set -gx GOPATH2 "$HOME/go/bin/bin/"
 set -gx MIXPATH "$HOME/.mix/escripts/"
 
+set -gx GOOGLE_CLOUD_PROJECT "DO_NOT_FORGET_TO_SETUP"
+
 set -gx PATH "$JAVA_HOME/bin:$UVPATH:$DENOPATH:$MIXPATH:$GOPATH:$GOPATH2:$KOTLIN_NATIVE_PATH:$KOTLIN_PATH:$GRADLE_PATH:$PATH"
 abbr -a lg lazygit
 abbr -a vi nvim
@@ -85,11 +87,11 @@ atuin init --disable-up-arrow fish | source
 fish_config theme choose rose-pine
 
 # >>> coursier install directory >>>
-set -gx PATH "$PATH:/home/lev-arch/.local/share/coursier/bin:/app"
+set -gx PATH "$PATH:/home/k4c/.local/share/coursier/bin:/app"
 # <<< coursier install directory <<<
 
 # pnpm
-set -gx PNPM_HOME "/home/lev-arch/.local/share/pnpm"
+set -gx PNPM_HOME "/home/k4c/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
     set -gx PATH "$PNPM_HOME" $PATH
 end
